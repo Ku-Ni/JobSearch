@@ -1,9 +1,11 @@
-package co.uk.coenie.integration.jobsites.service.dto;
+package co.uk.coenie.integration.jobsites.client.dto;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.util.StringUtils;
 
 public class ReedSearchParameters {
 	private String keyWords; 
@@ -93,7 +95,7 @@ public class ReedSearchParameters {
 		List<String> tmpParameterArr = new ArrayList<>();
 		
 		if (keyWords != null)
-			tmpParameterArr.add("keywords="+keyWords);
+			tmpParameterArr.add("keywords="+StringUtils.replace(keyWords, " ", "+"));
 		if (location != null)
 			tmpParameterArr.add("locationName="+location);
 		
@@ -110,7 +112,7 @@ public class ReedSearchParameters {
 		tmpParameterArr.add("partTime="+partTime);
 		tmpParameterArr.add("fullTime="+fullTime);
 		
-		return URLEncoder.encode(String.join("&", tmpParameterArr), "UTF-8");
+		return String.join("&", tmpParameterArr);
 	}
 	
 }

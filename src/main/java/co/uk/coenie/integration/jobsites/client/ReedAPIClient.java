@@ -1,13 +1,13 @@
 /**
  * 
  */
-package co.uk.coenie.integration.jobsites.service;
+package co.uk.coenie.integration.jobsites.client;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Set;
 
+import co.uk.coenie.integration.jobsites.client.dto.ReedSearchParameters;
 import co.uk.coenie.integration.jobsites.dto.Job;
-import co.uk.coenie.integration.jobsites.service.dto.ReedSearchParameters;
 
 /**
  * @author Coenie

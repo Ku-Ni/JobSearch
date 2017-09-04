@@ -1,4 +1,4 @@
-package co.uk.coenie.integration.jobsites.service;
+package co.uk.coenie.integration.jobsites.client;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -12,11 +12,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import co.uk.coenie.integration.jobsites.client.dto.ReedJob;
+import co.uk.coenie.integration.jobsites.client.dto.ReedJobSearchResult;
+import co.uk.coenie.integration.jobsites.client.dto.ReedSearchParameters;
 import co.uk.coenie.integration.jobsites.config.Constants.JobSite;
 import co.uk.coenie.integration.jobsites.dto.Job;
-import co.uk.coenie.integration.jobsites.service.dto.ReedJob;
-import co.uk.coenie.integration.jobsites.service.dto.ReedJobSearchResult;
-import co.uk.coenie.integration.jobsites.service.dto.ReedSearchParameters;
 
 @Service
 public class ReedAPIClientImpl implements ReedAPIClient {

@@ -1,4 +1,4 @@
-package co.uk.coenie.integration.jobsites.service.dto;
+package co.uk.coenie.integration.jobsites.client.dto;
 
 import java.util.List;
 
